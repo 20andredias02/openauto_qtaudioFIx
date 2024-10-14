@@ -24,6 +24,8 @@ namespace openauto
 namespace projection
 {
 
+std::mutex RtAudioOutput::mutex_;
+
 RtAudioOutput::RtAudioOutput(uint32_t channelCount, uint32_t sampleSize, uint32_t sampleRate)
     : channelCount_(channelCount)
     , sampleSize_(sampleSize)
