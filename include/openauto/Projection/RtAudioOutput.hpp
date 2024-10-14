@@ -50,7 +50,7 @@ private:
     uint32_t sampleRate_;
     SequentialBuffer audioBuffer_;
     std::unique_ptr<RtAudio> dac_;
-    std::mutex mutex_;
+    static std::mutex mutex_;
 };
 
 }
